@@ -133,6 +133,13 @@ body {
     background-color: #0b0f18;
 }
 
+.container {    /* DESKTOP */
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    max-width: 111rem;
+    margin: auto;
+}
+
 body.home {
     background-image: url("/img/Earth_Background.jpg");
 }
@@ -157,7 +164,7 @@ header {
     z-index: 1;
 }
 
-header:before{
+header:before{  /* Barre reliant de logo au header */
     content:"";
     display: block;
     height: 1px;
@@ -189,8 +196,6 @@ ol {
 
 li {
     list-style: none;
-    display: flex;
-    flex-direction: row;
     margin-left: 48px;
 }
 
@@ -238,13 +243,13 @@ nav>ol>li>a>span {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 30rem;
     margin-bottom: 130px;
     align-items: flex-end;
 }
 
 .content {
     max-width: 450px;
-    margin-left: 165px;
 }
 
 .content>p, h1 {
@@ -260,7 +265,7 @@ button {
     font-weight: 400;
     font-size: 28px;
     letter-spacing: 4.75px;
-    margin-right: 165px;
+    /* margin-right: 165px; */
     max-height:min-content;
     padding: 30px 30px 30px 30px;
     background-color: var(--color-FFFFFF);
@@ -332,6 +337,10 @@ button {
     margin: 0 160px 0 160px;
 }
 
+.planet-nav>li:first-of-type {
+    margin: 0;
+}
+
 .bottom-right-div {
     display: flex;
     flex-direction: row;
@@ -340,10 +349,6 @@ button {
 
 .distance {
     margin-right: 80px;
-}
-
-li {
-    color: var(--color-FFFFFF);
 }
 
 

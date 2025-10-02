@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/helpers.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Destination - Moon</title>
 </head>
@@ -12,7 +13,7 @@
     <header>
         <img class="header-logo" src="img/Logo.svg" alt="Logo">
         <nav>
-            <ol>
+            <ol class="main-nav-ol">
                 <li class="nav-item">
                     <a href="index.html">
                         <span>00</span>
@@ -46,13 +47,16 @@
             <p class="header-5 left-title">
                 <span>01</span> PICK YOUR DESTINATION
             </p>
-            <img class="moon-pic" src="img/Moon.png" alt="">
+            <picture>
+                <source srcset="img/Moon.png" type="image/png">
+                <img class="moon-pic" src="img/Moon.png" alt="Moon">
+            </picture>
         </div>
 
         <div class="right-div">
-                <ol>
+                <ol class="planet-nav">
                     <li>
-                        <a class="nav-item" href="#">MOON</a>
+                        <a class="nav-item active" href="#">MOON</a>
                     </li>
                     <li>
                         <a class="nav-item" href="#">MARS</a>
