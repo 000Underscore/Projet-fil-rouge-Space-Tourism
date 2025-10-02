@@ -1,0 +1,354 @@
+:root {
+    --color-0B0D17: #0B0D17;
+    --color-D0D6F9: #D0D6F9;
+    --color-FFFFFF: #FFFFFF;
+}
+
+/* bellefair-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Bellefair';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/bellefair-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* barlow-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/barlow-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* barlow-condensed-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* barlow-condensed-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/barlow-condensed-v13-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+  /* ////////////////////////////////////////// */
+ /* ////////////////////////////////////////// */
+/* ////////////////////////////////////////// */
+
+
+h1, h2, h3, h4, .subheading-1 {
+    font-family: 'Bellefair';
+    font-weight: 400;
+}
+
+h5, a, .navtext {
+    font-family: 'Barlow Condensed';
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Barlow';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--color-D0D6F9);
+}
+
+a {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    text-decoration: none;
+    color: var(--color-FFFFFF);
+}
+
+span {
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 150px;
+}
+
+h2 {
+    font-size: 100px;
+}
+
+h3 {
+    font-size: 56px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+.header-5 {
+    font-size: 28px;
+    letter-spacing: 4.75px;
+    color: var(--color-D0D6F9);
+}
+
+.subheading-1 {
+    font-size: 28px;
+}
+
+.subheading-2 {
+    font-size: 14px;
+    letter-spacing: 2.35px;
+}
+
+.navtext {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+}
+
+  /* //////////////////////////////////////////// */
+ /* ////////////////////INDEX/////////////////// */
+/* //////////////////////////////////////////// */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--color-FFFFFF);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-color: #0b0f18;
+}
+
+body.home {
+    background-image: url("/img/Earth_Background.jpg");
+}
+
+body.destination {
+    background-image: url("/img/Space_Background.jpg");
+}
+
+body.crew {
+    background-image: url("/img/crew_background.png");
+}
+
+header {
+    height: 96px;
+    margin-left: 55px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+header:before{
+    content:"";
+    display: block;
+    height: 1px;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.25);
+    position: absolute;
+    top: 50%;
+    left: 7rem;
+    z-index: 2;
+}
+
+.header-logo {
+    max-width: 48px;
+    max-height: 48px;
+}
+
+nav {
+    background: rgba(128, 128, 128, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 25px 0 25px 25px;
+}
+
+ol {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    margin-right: 165px;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 48px;
+}
+
+nav>ol>li>a>span {
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.nav-item a::before,
+.active:before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-FFFFFF);
+    position: absolute;
+    top: 3rem;
+    opacity: 0;
+}
+
+.nav-item .active::before {
+    opacity: 1;
+}
+
+.nav-item a:hover::before {
+    opacity: 0.5;
+}
+
+.nav-item a:active::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-FFFFFF);
+    position: absolute;
+    top: 3rem;
+    opacity: 1;
+}
+
+.nav-item a {
+    position: relative;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 130px;
+    align-items: flex-end;
+}
+
+.content {
+    max-width: 450px;
+    margin-left: 165px;
+}
+
+.content>p, h1 {
+    margin-bottom: 24px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.landing-page-btn {
+    font-family: 'Barlow Condensed';
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: 4.75px;
+    margin-right: 165px;
+    max-height:min-content;
+    padding: 30px 30px 30px 30px;
+    background-color: var(--color-FFFFFF);
+    border: none;
+    height: 274px;
+    width: 274px;
+    border-radius: 274px;
+    position: relative;
+    z-index: 1;
+}
+
+.landing-page-btn:before {
+    content: "";
+    display: block;
+    height: 250px;
+    width: 250px;
+    background-color: rgba(50, 50, 50, 0.1);
+    position: absolute;
+    opacity: 0;
+}
+
+.landing-page-btn:hover::after {
+    content: "";
+    display: block;
+    height: 450px;
+    width: 450px;
+    border-radius: 450px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    opacity: 1;
+    z-index: 2;
+    top: -32%;
+    left: -32%;
+    transition: ease-in-out 0.5s;
+}
+
+
+  /* //////////////////////////////////////////// */
+ /* ////////////////////MOON/////////////////// */
+/* ////////////////////////////////////////// */
+
+
+.moon-container {
+    display: flex;
+    flex-direction: row;
+    margin: 85px 160px 120px 165px;
+}
+
+.left-title {
+    margin-bottom: 85px;
+    color: var(--color-FFFFFF);
+}
+
+.left-title>span {
+    margin-right: 28px;
+    color: var(--color-D0D6F9);
+}
+
+.moon-pic {
+    max-width: 445px;
+    max-height: 445px;
+    padding-left: 50px;
+}
+
+.right-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 160px 0 160px;
+}
+
+.bottom-right-div {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.distance {
+    margin-right: 80px;
+}
+
+li {
+    color: var(--color-FFFFFF);
+}
+
+
+  /* ////////////////////////////////////////// */
+ /* ///////////////////CREW/////////////////// */
+/* ////////////////////////////////////////// */
+
+
