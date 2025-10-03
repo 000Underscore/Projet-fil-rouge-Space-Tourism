@@ -133,7 +133,6 @@ body {
     background-clip: border-box;
     background-repeat: no-repeat;
     background-color: #0b0f18;
-    overflow: hidden;
 }
 
 .container {    /* DESKTOP */
@@ -181,7 +180,7 @@ header:before{  /* navbar thin  line */
     background-color: rgba(255, 255, 255, 0.25);
     position: absolute;
     top: 50%;
-    left: 17rem;
+    left: 20rem;
     z-index: 2;
 }
 
@@ -255,21 +254,6 @@ nav>ol>li>a>span {
 .nav-item a {
     position: relative;
 }
-
-/* modification for smaller nav on "Destination" */
-.planet-nav a::before,
-.active::before {
-    top: 3rem;
-    height: 3px;
-    border-radius: 5px;
-}
-
-.planet-nav a:active::before {
-    top: 3rem;
-    height: 3px;
-    border-radius: 5px;
-}
-
 
 /* end of navbar underline */
 
@@ -351,6 +335,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    margin-top: 10rem;
 }
 
 .left-title {
@@ -393,6 +378,21 @@ button {
     margin: 0;
 }
 
+/* modification for smaller nav on "Destination" */
+.planet-nav a::before,
+.active::before {
+    top: 3rem;
+    height: 3px;
+    border-radius: 5px;
+}
+
+.planet-nav a:active::before {
+    top: 3rem;
+    height: 3px;
+    border-radius: 5px;
+    color: var(--color-0B0D17);
+}
+
 .bottom-right-div {
     display: flex;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
@@ -419,15 +419,16 @@ button {
     display: flex;
     flex-direction: row;
     flex-basis: 100%;
+    margin-top: 10rem;
 }
 
 .crew-container section {
     flex-basis: 50%;
 }
 
-.douglas {
+.crew-picture {
     flex-basis: 50%;
-    margin-left: 8rem;
+    margin-left: 8.2rem;
 }
 
 .profession {
@@ -440,9 +441,27 @@ button {
 }
 
 .crew-member-desc {
-    margin-bottom: 12rem;
+    margin-bottom: 5rem;
 }
 
-.dots-slider {
-    list-style-type: disc;
+ul.dots-slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
 }
+
+ul.dots-slider a {
+    font-size: 8rem;
+    font-weight: 800;
+    line-height: 0;
+}
+
+ul.dots-slider>li:first-of-type {
+    margin-left: 0;
+}
+
+ul.dots-slider>li {
+    margin-left: 2rem;
+}
+
