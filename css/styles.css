@@ -295,10 +295,9 @@ button {
 }
 
 .landing-page-btn {
-    font-family: 'Barlow Condensed';
-    font-weight: 400;
-    font-size: 28px;
-    letter-spacing: 4.75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 3rem 3rem 3rem 3rem;
     background-color: var(--color-FFFFFF);
     border: none;
@@ -334,21 +333,28 @@ button {
     transition: ease-in-out 0.5s;
 }
 
+.explore {
+    font-family: 'Bellefair';
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 4.75px;
+    color: var(--color-0B0D17);
+}
 
-  /* //////////////////////////////////////////// */
- /* ////////////////////MOON/////////////////// */
-/* ////////////////////////////////////////// */
+
+  /* ////////////////////////////////////////////////// */
+ /* ////////////////////DESTINATION/////////////////// */
+/* ////////////////////////////////////////////////// */
 
 
-.moon-container {
+.planet-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     padding: 0;
 }
 
 .left-title {
-    margin-bottom: 85px;
+    margin-bottom: 8.5rem;
     color: var(--color-FFFFFF);
     flex-basis: 100%;
 }
@@ -357,7 +363,7 @@ button {
     color: var(--color-D0D6F9);
 }
 
-.moon-pic {
+.planet-pic {
     max-width: 44.5rem;
     max-height: 44.5rem;
     padding-left: 5rem;
@@ -368,9 +374,18 @@ button {
     flex-direction: column;
     flex-basis: 50%;
     justify-content: space-between;
+    margin-bottom: 11rem;
 }
 
-.moon-pic-div {
+.right-div>p:first-of-type {
+    margin-top: 2.4rem;
+}
+
+.right-div h2 {
+    margin-top: 3.7rem;
+}
+
+.planet-pic-div {
     flex-basis: 50%;
 }
 
@@ -380,8 +395,14 @@ button {
 
 .bottom-right-div {
     display: flex;
-    flex-direction: row;
     border-top: 1px solid rgba(255, 255, 255, 0.25);
+    margin-top: 5.4rem;
+}
+
+.bottom-right-div>div:first-of-type {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2.8rem;
 }
 
 .distance {
