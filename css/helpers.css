@@ -1,8 +1,8 @@
 
 /* Débuggueur CSS  */
-/* * {
+* {
   outline: 1px solid red;
-} */
+}
 
 html {
     font-size: 62.5%; /* 1rem = 10px avec une base utilisateur de 16px */
