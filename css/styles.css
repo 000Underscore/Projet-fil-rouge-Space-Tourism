@@ -1,535 +1,550 @@
 :root {
-    --color-0B0D17: #0B0D17;
-    --color-D0D6F9: #D0D6F9;
-    --color-FFFFFF: #FFFFFF;
+  --color-0B0D17: #0b0d17;
+  --color-D0D6F9: #d0d6f9;
+  --color-FFFFFF: #ffffff;
 }
 
 /* bellefair-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Bellefair';
+  font-family: "Bellefair";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/bellefair-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/bellefair-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* barlow-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Barlow';
+  font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/barlow-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/barlow-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* barlow-condensed-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Barlow Condensed';
+  font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/barlow-condensed-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* barlow-condensed-800 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Barlow Condensed';
+  font-family: "Barlow Condensed";
   font-style: normal;
   font-weight: 800;
-  src: url('../fonts/barlow-condensed-v13-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/barlow-condensed-v13-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/*^ ////////////////////////////////////////// */
+/*^ ////////////////////////////////////////// */
+/*^ ////////////////////////////////////////// */
 
-  /* ////////////////////////////////////////// */
- /* ////////////////////////////////////////// */
-/* ////////////////////////////////////////// */
-
-
-h1, h2, h3, h4, .subheading-1 {
-    font-family: 'Bellefair';
-    font-weight: 400;
+h1,
+h2,
+h3,
+h4,
+.subheading-1 {
+  font-family: "Bellefair";
+  font-weight: 400;
 }
 
-h5, a, .navtext {
-    font-family: 'Barlow Condensed';
-    font-weight: 400;
+h5,
+a,
+.navtext {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
 }
 
 p {
-    font-family: 'Barlow';
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
-    color: var(--color-D0D6F9);
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: var(--color-D0D6F9);
 }
 
 a {
-    font-size: 16px;
-    letter-spacing: 2.7px;
-    text-decoration: none;
-    color: var(--color-FFFFFF);
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-decoration: none;
+  color: var(--color-FFFFFF);
 }
 
 span {
-    font-weight: 800;
-    margin-right: 10px;
+  font-weight: 800;
+  margin-right: 10px;
 }
 
 h1 {
-    font-size: 150px;
+  font-size: 150px;
 }
 
 h2 {
-    font-size: 100px;
+  font-size: 100px;
 }
 
 h3 {
-    font-size: 56px;
+  font-size: 56px;
 }
 
 h4 {
-    font-size: 32px;
-    color: var(--color-D0D6F9);
-    opacity: 50%;
+  font-size: 32px;
+  color: var(--color-D0D6F9);
+  opacity: 50%;
 }
 
 .header-5 {
-    font-size: 28px;
-    letter-spacing: 4.75px;
-    color: var(--color-D0D6F9);
+  font-size: 28px;
+  letter-spacing: 4.75px;
+  color: var(--color-D0D6F9);
 }
 
 .subheading-1 {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .subheading-2 {
-    font-size: 14px;
-    letter-spacing: 2.35px;
+  font-size: 14px;
+  letter-spacing: 2.35px;
 }
 
 .navtext {
-    font-size: 16px;
-    letter-spacing: 2.7px;
+  font-size: 16px;
+  letter-spacing: 2.7px;
 }
 
-  /* //////////////////////////////////////////// */
- /* ////////////////////INDEX/////////////////// */
-/* //////////////////////////////////////////// */
+/*^ //////////////////////////////////////////// */
+/*^ ////////////////////INDEX/////////////////// */
+/*^ //////////////////////////////////////////// */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    color: var(--color-FFFFFF);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-size: cover;
-    background-clip: border-box;
-    background-repeat: no-repeat;
-    background-color: #0b0f18;
+  color: var(--color-FFFFFF);
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-clip: border-box;
+  background-repeat: no-repeat;
+  background-color: #0b0f18;
 }
 
-.container {    /* DESKTOP */
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-    max-width: 111rem;
-    margin: 0 auto;
+.container {
+  /* DESKTOP */
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+  max-width: 111rem;
+  margin: 0 auto;
 }
 
 body.home {
-    background-image: url("/img/Earth_Background.jpg");
+  background-image: url("/img/Earth_Background.jpg");
 }
 
 body.destination {
-    background-image: url("/img/Space_Background.jpg");
+  background-image: url("/img/Space_Background.jpg");
 }
 
 body.crew {
-    background-image: url("/img/crew_background.png");
+  background-image: url("/img/crew_background.png");
 }
 
 .header-logo {
-    transform: translateX(-30rem);
+  transform: translateX(-30rem);
 }
 
 header {
-    position: relative;
-    z-index: 1;
-    left: 0;
-    right: 0;
-    top: 4rem;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 4rem;
 }
 
 .header-div {
-    display: flex;
-    justify-content: space-between;
-    margin: auto auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin: auto auto 0 auto;
 }
 
-header:before{  /* navbar thin  line */
-    content:"";
-    display: block;
-    height: 1px;
-    width: 30%;
-    background-color: rgba(255, 255, 255, 0.25);
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    z-index: 2;
+header:before {
+  /* navbar thin  line */
+  content: "";
+  display: block;
+  height: 0.1rem;
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
-header::after {     /* Navbar Blurred Background */
-    content: '';
-    display: block;
-    height: 8rem;
-    width: 55%;
-    position: absolute;
-    background: rgba(128, 128, 128, 0.1);
-    backdrop-filter: blur(20px);
-    opacity: 1;
-    right: 0;
-    top: 0;
-    z-index: 1;
+header::after {
+  /* Navbar Blurred Background */
+  content: "";
+  display: block;
+  height: 5rem;
+  width: 55%;
+  position: absolute;
+  background: rgba(128, 128, 128, 0.1);
+  backdrop-filter: blur(20px);
+  opacity: 1;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 
 nav {
-    padding: 2.5rem 0 2.5rem 2.5rem;
-    z-index: 2;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  z-index: 2;
 }
 
 ol {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
 }
 
 li {
-    list-style: none;
-    margin-left: 48px;
+  list-style: none;
+  margin-left: 48px;
 }
 
-nav>ol>li>a>span {
-    font-weight: 800;
-    margin-right: 10px;
+nav > ol > li > a > span {
+  font-weight: 800;
+  margin-right: 10px;
 }
 
 /* navbar underline */
 .nav-item a::before,
 .active:before {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: var(--color-FFFFFF);
-    position: absolute;
-    top: 4.5rem;
-    opacity: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-FFFFFF);
+  position: absolute;
+  top: 4.5rem;
+  opacity: 0;
 }
 
 .nav-item .active::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .nav-item a:hover::before {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .nav-item a:active::before {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 100%;
-    background-color: var(--color-FFFFFF);
-    position: absolute;
-    top: 4.5rem;
-    opacity: 1;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-FFFFFF);
+  position: absolute;
+  top: 4.5rem;
+  opacity: 1;
 }
 
 .nav-item a {
-    position: relative;
+  position: relative;
 }
-
 /* end of navbar underline */
 
 .home-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30rem;
-    margin-bottom: 30rem;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30rem;
+  margin-top: 15rem;
+  align-items: flex-end;
 }
 
 .content {
-    max-width: 450px;
+  max-width: 450px;
 }
 
-.content>p, h1 {
-    margin-bottom: 24px;
+.content > p,
+h1 {
+  margin-bottom: 24px;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .landing-page-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 3rem 3rem 3rem;
-    background-color: var(--color-FFFFFF);
-    border: none;
-    height: 27rem;
-    width: 27rem;
-    border-radius: 27rem;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 3rem 3rem 3rem;
+  background-color: var(--color-FFFFFF);
+  border: none;
+  height: 27rem;
+  width: 27rem;
+  border-radius: 27rem;
+  position: relative;
+  z-index: 1;
 }
 
 .landing-page-btn:before {
-    content: "";
-    display: block;
-    height: 25rem;
-    width: 25rem;
-    background-color: rgba(50, 50, 50, 0.1);
-    position: absolute;
-    opacity: 0;
+  content: "";
+  display: block;
+  height: 25rem;
+  width: 25rem;
+  background-color: rgba(50, 50, 50, 0.1);
+  position: absolute;
+  opacity: 0;
 }
 
 .landing-page-btn:hover::after {
-    content: "";
-    display: block;
-    height: 45rem;
-    width: 45rem;
-    border-radius: 45rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    opacity: 1;
-    z-index: 2;
-    top: -32%;
-    left: -32%;
-    transition: ease-in-out 0.5s;
+  content: "";
+  display: block;
+  height: 45rem;
+  width: 45rem;
+  border-radius: 45rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  opacity: 1;
+  z-index: 2;
+  top: -32%;
+  left: -32%;
+  transition: ease-in-out 0.5s;
 }
 
 .explore {
-    font-family: 'Bellefair';
-    font-weight: 400;
-    font-size: 32px;
-    letter-spacing: 4.75px;
-    color: var(--color-0B0D17);
+  font-family: "Bellefair";
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 4.75px;
+  color: var(--color-0B0D17);
 }
 
-
-  /* ////////////////////////////////////////////////// */
- /* ////////////////////DESTINATION/////////////////// */
-/* ////////////////////////////////////////////////// */
-
+/*^ ////////////////////////////////////////////////// */
+/*^ ////////////////////DESTINATION/////////////////// */
+/*^ ////////////////////////////////////////////////// */
 
 .planet-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin-top: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 10rem;
 }
 
 .left-title {
-    margin-bottom: 8.5rem;
-    color: var(--color-FFFFFF);
-    flex-basis: 100%;
+  margin-bottom: 8.5rem;
+  color: var(--color-FFFFFF);
+  flex-basis: 100%;
 }
 
-.left-title>span {
-    color: var(--color-D0D6F9);
+.left-title > span {
+  color: var(--color-D0D6F9);
 }
 
 .planet-pic {
-    max-width: 44.5rem;
-    max-height: 44.5rem;
-    padding-left: 5rem;
+  max-width: 44.5rem;
+  max-height: 44.5rem;
+  padding-left: 5rem;
 }
 
 .right-div {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 50%;
-    justify-content: space-between;
-    margin-bottom: 11rem;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  justify-content: space-between;
+  margin-bottom: 11rem;
 }
 
-.right-div>p:first-of-type {
-    margin-top: 2.4rem;
+.right-div > p:first-of-type {
+  margin-top: 2.4rem;
 }
 
 .right-div h2 {
-    margin-top: 3.7rem;
+  margin-top: 3.7rem;
 }
 
 .planet-pic-div {
-    flex-basis: 50%;
+  flex-basis: 50%;
 }
 
-.planet-nav>li:first-of-type {
-    margin: 0;
+.planet-nav > li:first-of-type {
+  margin: 0;
 }
 
 /* modification for smaller nav on "Destination" */
 .planet-nav a::before,
 .active::before {
-    top: 3rem;
-    height: 3px;
-    border-radius: 5px;
+  top: 3rem;
+  height: 3px;
+  border-radius: 5px;
 }
 
 .planet-nav a:active::before {
-    top: 3rem;
-    height: 3px;
-    border-radius: 5px;
-    color: var(--color-0B0D17);
+  top: 3rem;
+  height: 3px;
+  border-radius: 5px;
+  color: var(--color-0B0D17);
 }
 
 .bottom-right-div {
-    display: flex;
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    margin-top: 5.4rem;
+  display: flex;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin-top: 5.4rem;
 }
 
-.bottom-right-div>div:first-of-type {
-    display: flex;
-    flex-direction: row;
-    margin-top: 2.8rem;
+.bottom-right-div > div:first-of-type {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2.8rem;
 }
 
 .distance {
-    margin-right: 8rem;
+  margin-right: 8rem;
 }
 
+/*^ ////////////////////////////////////////////////// */
+/*^ ///////////// DESTINATION JS VERSION ///////////// */
+/*^ ////////////////////////////////////////////////// */
 
-  /* ////////////////////////////////////////// */
- /* ///////////////////CREW/////////////////// */
-/* ////////////////////////////////////////// */
-
+/*^ ////////////////////////////////////////// */
+/*^ ///////////////////CREW/////////////////// */
+/*^ ////////////////////////////////////////// */
 
 .crew-container {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 100%;
-    margin-top: 10rem;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  margin-top: 10rem;
 }
 
 .crew-container section {
-    flex-basis: 50%;
+  flex-basis: 50%;
 }
 
 .crew-picture {
-    flex-basis: 50%;
-    margin-left: 8.2rem;
+  flex-basis: 50%;
+  margin-left: 8.2rem;
 }
 
 .profession {
-    margin-top: 15.5rem;
-    margin-bottom: 1.4rem;
+  margin-top: 15.5rem;
+  margin-bottom: 1.4rem;
 }
 
 .crew-member {
-    margin-bottom: 2.7rem;
+  margin-bottom: 2.7rem;
 }
 
 .crew-member-desc {
-    margin-bottom: 5rem;
+  margin-bottom: 5rem;
 }
 
 ul.dots-slider {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
 }
 
 ul.dots-slider a {
+  font-size: 8rem;
+  font-weight: 800;
+  line-height: 0;
+  color: var(--color-FFFFFF);
+  opacity: 0.17;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+ul.dots-slider a:hover,
+ul.dots-slider a.active {
+  opacity: 1;
+}
+
+ul.dots-slider > li:first-of-type {
+  margin-left: 0;
+}
+
+ul.dots-slider > li {
+  margin-left: 2rem;
+}
+
+/*^ //////////////////////////////////////////// */
+/*^ ////////////////////MEDIA/////////////////// */
+/*^ //////////////////////////////////////////// */
+
+@media (max-width: 375px) {
+  /* iPHONE SE */
+
+  p {
+    font-size: 1.5rem;
+    line-height: 25px;
+  }
+
+  h1 {
     font-size: 8rem;
-    font-weight: 800;
-    line-height: 0;
-}
+    line-height: 100px;
+  }
 
-ul.dots-slider>li:first-of-type {
-    margin-left: 0;
-}
+  .header-5 {
+    font-size: 1.6rem;
+    letter-spacing: 2.7px;
+  }
 
-ul.dots-slider>li {
-    margin-left: 2rem;
-}
+  /* TEMPORAIRE | NAV DOIT ETRE EN HIDDEN POUR LE BURGER */
+  header nav,
+  header:before,
+  header::after {
+    display: none;
+  }
+  /* //// */
 
+  .header-logo {
+    transform: translateX(0);
+  }
 
-  /* //////////////////////////////////////////// */
- /* ////////////////////MEDIA/////////////////// */
-/* //////////////////////////////////////////// */
+  body.home {
+    background-image: url("../img/Earth_Background-phone.png");
+  }
 
+  .home-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
 
-@media (max-width: 375px) {  /* iPHONE SE */
+  .container {
+    margin: 2.4rem 2.4rem 4.8rem 2.4rem;
+    padding: 0;
+    max-width: 37.5rem;
+  }
 
-    p {
-        font-size: 1.5rem;
-        line-height: 25px;
-    }
+  .header-div {
+    margin-left: 2.4rem;
+  }
 
-    h1 {
-        font-size: 8rem;
-        line-height: 100px;
-    }
+  .landing-page-btn {
+    height: 15rem;
+    width: 15rem;
+  }
 
-    .header-5 {
-        font-size: 1.6rem;
-        letter-spacing: 2.7px;
-    }
-
-/* TEMPORAIRE | NAV DOIT ETRE EN HIDDEN POUR LE BURGER */
-    header nav, header:before, header::after {
-        display: none;
-    }
-/* //// */
-    
-    .header-logo {
-        transform: translateX(0);
-    }
-    
-    body.home {
-        background-image: url("../img/Earth_Background-phone.png");
-    }
-    
-    .home-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0;
-        margin-bottom: 0;
-        text-align: center;
-    }
-    
-    .container {
-        margin: 2.4rem 2.4rem 4.8rem 2.4rem;
-        padding: 0;
-        max-width: 37.5rem;
-    }
-    
-    .header-div {
-        margin-left: 2.4rem;
-    }
-    
-    .landing-page-btn {
-        height: 15rem;
-        width: 15rem;
-    }
-    
-    .explore {
-        font-size: 2rem;
-        letter-spacing: 1.25px;
-        margin: 0;
-    }
-    
+  .explore {
+    font-size: 2rem;
+    letter-spacing: 1.25px;
+    margin: 0;
+  }
 }
