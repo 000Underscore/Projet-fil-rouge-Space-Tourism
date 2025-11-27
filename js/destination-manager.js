@@ -38,15 +38,57 @@ class DestinationManager {
     });
   }
 
-  loadDestination(destinationName) {
+loadDestination(destinationName) {
     const destination = this.destinations[destinationName];
     if (!destination) return;
 
-    this.updateImage(destination.image);
-    this.updateTitle(destination.name);
-    this.updateDescription(destination.description);
-    this.updateDistance(destination.distance);
-    this.updateTravelTime(destination.travelTime);
+    this.fadeOutContent(() => {
+      this.updateImage(destination.image);
+      this.updateTitle(destination.name);
+      this.updateDescription(destination.description);
+      this.updateDistance(destination.distance);
+      this.updateTravelTime(destination.travelTime);
+      this.fadeInContent();
+    });
+  }
+
+  fadeOutContent(callback) {
+    const elements = [
+      document.querySelector('.planet-pic-div img'),
+      document.querySelector('.right-div h2'),
+      document.querySelector('.planet-description'),
+      document.querySelector('.avg-distance .subheading-1'),
+      document.querySelector('.travel-time .subheading-1.travel')
+    ];
+
+    elements.forEach(el => {
+      if (el) {
+        el.classList.add('destination-content-transition', 'fade-out');
+      }
+    });
+
+    setTimeout(callback, 300);
+  }
+
+  fadeInContent() {
+    const elements = [
+      document.querySelector('.planet-pic-div img'),
+      document.querySelector('.right-div h2'),
+      document.querySelector('.planet-description'),
+      document.querySelector('.avg-distance .subheading-1'),
+      document.querySelector('.travel-time .subheading-1.travel')
+    ];
+
+    elements.forEach(el => {
+      if (el) {
+        el.classList.remove('fade-out');
+        el.classList.add('fade-in');
+        
+        setTimeout(() => {
+          el.classList.remove('destination-content-transition', 'fade-in');
+        }, 300);
+      }
+    });
   }
 
   updateImage(imageSrc) {

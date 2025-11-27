@@ -318,7 +318,6 @@ button {
   z-index: 2;
   top: -32%;
   left: -32%;
-  transition: ease-in-out 0.5s;
 }
 
 .explore {
@@ -501,6 +500,18 @@ ul.dots-slider > li:first-of-type {
 
 ul.dots-slider > li {
   margin-left: 2rem;
+}
+
+.crew-content-transition {
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.crew-content-transition.fade-out {
+  opacity: 0;
+}
+
+.crew-content-transition.fade-in {
+  opacity: 1;
 }
 
 /*^ //////////////////////////////////////////// */
