@@ -53,10 +53,15 @@ class CrewManager {
     this.updateDescription(crewMember.description);
   }
 
-  updateImage(imageSrc) {
+updateImage(imageSrc) {
     const crewImage = document.querySelector('.crew-container picture img');
+    const crewSource = document.querySelector('.crew-container picture source');
+    
     if (crewImage) {
       crewImage.src = imageSrc;
+    }
+    if (crewSource) {
+      crewSource.srcset = imageSrc;
     }
   }
 
