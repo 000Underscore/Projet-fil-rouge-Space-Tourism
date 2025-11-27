@@ -43,14 +43,54 @@ class CrewManager {
     });
   }
 
-  loadCrewMember(crewKey) {
+loadCrewMember(crewKey) {
     const crewMember = this.crewMembers[crewKey];
     if (!crewMember) return;
 
-    this.updateImage(crewMember.image);
-    this.updateRole(crewMember.role);
-    this.updateName(crewMember.name);
-    this.updateDescription(crewMember.description);
+    this.fadeOutContent(() => {
+      this.updateImage(crewMember.image);
+      this.updateRole(crewMember.role);
+      this.updateName(crewMember.name);
+      this.updateDescription(crewMember.description);
+      this.fadeInContent();
+    });
+  }
+
+  fadeOutContent(callback) {
+    const elements = [
+      document.querySelector('.profession'),
+      document.querySelector('.crew-member'),
+      document.querySelector('.crew-member-desc'),
+      document.querySelector('.crew-picture img')
+    ];
+
+    elements.forEach(el => {
+      if (el) {
+        el.classList.add('crew-content-transition', 'fade-out');
+      }
+    });
+
+    setTimeout(callback, 300);
+  }
+
+  fadeInContent() {
+    const elements = [
+      document.querySelector('.profession'),
+      document.querySelector('.crew-member'),
+      document.querySelector('.crew-member-desc'),
+      document.querySelector('.crew-picture img')
+    ];
+
+    elements.forEach(el => {
+      if (el) {
+        el.classList.remove('fade-out');
+        el.classList.add('fade-in');
+        
+        setTimeout(() => {
+          el.classList.remove('crew-content-transition', 'fade-in');
+        }, 300);
+      }
+    });
   }
 
 updateImage(imageSrc) {
