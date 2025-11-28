@@ -108,9 +108,14 @@ function createChart(chartType = 'distance') {
     ctx.fillText(destinationsData[dest].name, x, canvas.height - padding + Math.max(20, canvas.height * 0.03));
     
     if (chartType === 'distance' || chartType === 'both') {
-      // Distance bar (inverted scale - smaller values appear higher)
+      // Distance bar (custom scale for better visual distinction)
       const minDistance = Math.min(...distances);
-      const normalizedDistance = 1 - ((distances[index] - minDistance) / (maxDistance - minDistance));
+      const maxDistance = Math.max(...distances);
+      // Use custom scale: power of 0.3 for more compression
+      const powMin = Math.pow(minDistance, 0.3);
+      const powMax = Math.pow(maxDistance, 0.3);
+      const powCurrent = Math.pow(distances[index], 0.3);
+      const normalizedDistance = 1 - ((powCurrent - powMin) / (powMax - powMin));
       const distanceHeight = normalizedDistance * chartHeight * 0.8; // Use 80% of chart height
       ctx.fillStyle = '#ff6b6b';
       const barX = chartType === 'both' ? x - barWidth : x - barWidth/2;
@@ -125,8 +130,14 @@ function createChart(chartType = 'distance') {
     }
     
     if (chartType === 'time' || chartType === 'both') {
-      // Travel time bar (normal scale - larger values appear higher)
-      const normalizedTravelTime = travelTimes[index] / maxTravelTime;
+      // Travel time bar (custom scale for better visual distinction)
+      const minTravelTime = Math.min(...travelTimes);
+      const maxTravelTime = Math.max(...travelTimes);
+      // Use custom scale: power of 0.5 (square root) for moderate compression
+      const powMin = Math.pow(minTravelTime, 0.5);
+      const powMax = Math.pow(maxTravelTime, 0.5);
+      const powCurrent = Math.pow(travelTimes[index], 0.5);
+      const normalizedTravelTime = (powCurrent - powMin) / (powMax - powMin);
       const travelTimeHeight = normalizedTravelTime * chartHeight * 0.8;
       ctx.fillStyle = '#4ecdc4';
       const barX = chartType === 'both' ? x : x - barWidth/2;
@@ -190,8 +201,8 @@ function createChart(chartType = 'distance') {
   
   // Add scale explanation
   ctx.font = `${Math.max(10, canvas.width * 0.01)}px Barlow`;
-  const scaleText = chartType === 'both' ? '(mixed scales - distance inverted, time normal)' : 
-                   chartType === 'distance' ? '(inverted - closer = higher)' : 
-                   '(normal scale - longer = higher)';
+  const scaleText = chartType === 'both' ? '(power scales - distance^0.3 inverted, time^0.5 normal)' : 
+                   chartType === 'distance' ? '(power 0.3 - closer = higher)' : 
+                   '(power 0.5 - longer = higher)';
   ctx.fillText(scaleText, padding - Math.max(10, canvas.width * 0.01), padding - 10);
 }
