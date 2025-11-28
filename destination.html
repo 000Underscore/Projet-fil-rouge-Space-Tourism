@@ -83,11 +83,32 @@
               <p class="subheading-2">Est. travel time</p>
               <p class="subheading-1 travel">3 days</p>
             </div>
+            <button class="chart-btn" id="chartBtn">Compare</button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal" id="chartModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <div class="chart-controls">
+          <button class="chart-control-btn active" data-type="distance">
+            Distance
+          </button>
+          <button class="chart-control-btn" data-type="time">
+            Travel Time
+          </button>
+          <button class="chart-control-btn" data-type="both">Both</button>
+        </div>
+        <div class="chart-container">
+          <canvas id="comparisonChart"></canvas>
+        </div>
+      </div>
+    </div>
     <script src="js/destinations-data.js"></script>
     <script src="js/destination-manager.js"></script>
+    <script src="js/chart-modal.js"></script>
   </body>
 </html>
