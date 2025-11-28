@@ -424,6 +424,98 @@ button {
   margin-right: 8rem;
 }
 
+.chart-btn {
+  background-color: var(--color-0B0D17);
+  color: var(--color-D0D6F9);
+  border: 1px solid;
+  border-color: var(--color-D0D6F9);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: "Barlow";
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 8rem;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.chart-btn:hover {
+  transform: translateY(1px);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: var(--color-0B0D17);
+  font-family: "Barlow";
+  margin: 2% auto;
+  padding: 2rem;
+  border: 1px solid var(--color-D0D6F9);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh;
+  position: relative;
+}
+
+.close {
+  color: var(--color-FFFFFF);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--color-D0D6F9);
+}
+
+.chart-container {
+  width: calc(100% - 4rem);
+  height: calc(100% - 10rem);
+  position: relative;
+  margin: 0 auto;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-control-btn {
+  background-color: transparent;
+  color: var(--color-D0D6F9);
+  border: 1px solid var(--color-D0D6F9);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: "Barlow Condensed";
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chart-control-btn:hover,
+.chart-control-btn.active {
+  background-color: var(--color-D0D6F9);
+  color: var(--color-0B0D17);
+}
+
 /*^ ////////////////////////////////////////// */
 /*^ ///////////////////CREW/////////////////// */
 /*^ ////////////////////////////////////////// */
