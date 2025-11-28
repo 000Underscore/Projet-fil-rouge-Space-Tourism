@@ -108,25 +108,24 @@ function createChart(chartType = 'distance') {
     ctx.fillText(destinationsData[dest].name, x, canvas.height - padding + Math.max(20, canvas.height * 0.03));
     
     if (chartType === 'distance' || chartType === 'both') {
-      // Distance bar (normalized to 0-1 scale)
-      const normalizedDistance = distances[index] / maxDistance;
+      // Distance bar (inverted scale - smaller values appear higher)
+      const minDistance = Math.min(...distances);
+      const normalizedDistance = 1 - ((distances[index] - minDistance) / (maxDistance - minDistance));
       const distanceHeight = normalizedDistance * chartHeight * 0.8; // Use 80% of chart height
       ctx.fillStyle = '#ff6b6b';
       const barX = chartType === 'both' ? x - barWidth : x - barWidth/2;
       const barW = chartType === 'both' ? barWidth * 0.8 : barWidth * 1.2;
       ctx.fillRect(barX, canvas.height - padding - distanceHeight, barW, distanceHeight);
       
-      // Distance value
-      ctx.save();
-      ctx.translate(barX + barW/2, canvas.height - padding - distanceHeight - Math.max(10, canvas.height * 0.02));
-      ctx.rotate(-Math.PI/4);
+      // Distance value (horizontal text)
+      ctx.fillStyle = '#ffffff';
       ctx.font = `${Math.max(12, canvas.width * 0.012)}px Barlow`;
-      ctx.fillText(destinationsData[dest].distance, 0, 0);
-      ctx.restore();
+      ctx.textAlign = 'center';
+      ctx.fillText(destinationsData[dest].distance, barX + barW/2, canvas.height - padding - distanceHeight - 10);
     }
     
     if (chartType === 'time' || chartType === 'both') {
-      // Travel time bar (normalized to 0-1 scale)
+      // Travel time bar (normal scale - larger values appear higher)
       const normalizedTravelTime = travelTimes[index] / maxTravelTime;
       const travelTimeHeight = normalizedTravelTime * chartHeight * 0.8;
       ctx.fillStyle = '#4ecdc4';
@@ -134,13 +133,11 @@ function createChart(chartType = 'distance') {
       const barW = chartType === 'both' ? barWidth * 0.8 : barWidth * 1.2;
       ctx.fillRect(barX, canvas.height - padding - travelTimeHeight, barW, travelTimeHeight);
       
-      // Travel time value
-      ctx.save();
-      ctx.translate(barX + barW/2, canvas.height - padding - travelTimeHeight - Math.max(10, canvas.height * 0.02));
-      ctx.rotate(-Math.PI/4);
+      // Travel time value (horizontal text)
+      ctx.fillStyle = '#ffffff';
       ctx.font = `${Math.max(12, canvas.width * 0.012)}px Barlow`;
-      ctx.fillText(destinationsData[dest].travelTime, 0, 0);
-      ctx.restore();
+      ctx.textAlign = 'center';
+      ctx.fillText(destinationsData[dest].travelTime, barX + barW/2, canvas.height - padding - travelTimeHeight - 10);
     }
   });
   
@@ -193,8 +190,8 @@ function createChart(chartType = 'distance') {
   
   // Add scale explanation
   ctx.font = `${Math.max(10, canvas.width * 0.01)}px Barlow`;
-  const scaleText = chartType === 'both' ? '(normalized scale)' : 
-                   chartType === 'distance' ? '(distance normalized)' : 
-                   '(time normalized)';
+  const scaleText = chartType === 'both' ? '(mixed scales - distance inverted, time normal)' : 
+                   chartType === 'distance' ? '(inverted - closer = higher)' : 
+                   '(normal scale - longer = higher)';
   ctx.fillText(scaleText, padding - Math.max(10, canvas.width * 0.01), padding - 10);
 }
